@@ -29,8 +29,14 @@ const ExpandableTable: React.FC = () => {
         aria-label="Expandable data table"
         aria-rowcount={rowCount + 1}
         aria-colcount={columnCount + 1}
+        data-cy="expandable-table"
       >
-        <div className={styles.headerRow} role="row" aria-rowindex={1}>
+        <div
+          className={styles.headerRow}
+          role="row"
+          aria-rowindex={1}
+          data-cy="table-header"
+        >
           <div
             className={styles.iconHeader}
             role="columnheader"
@@ -40,6 +46,7 @@ const ExpandableTable: React.FC = () => {
               src="/dataCrunchLogo.png"
               alt="dataCrunch"
               className={styles.logo}
+              data-cy="logo"
             />
           </div>
           {columns.map((col: string) => (
@@ -65,6 +72,7 @@ const ExpandableTable: React.FC = () => {
                 role="row"
                 aria-rowindex={idx + 2}
                 aria-expanded={expanded[idx]}
+                data-cy={`table-row-${idx}`}
                 aria-describedby={
                   expanded[idx] ? `expanded-content-${idx}` : undefined
                 }
@@ -93,6 +101,7 @@ const ExpandableTable: React.FC = () => {
                       idx + 1
                     }`}
                     aria-expanded={expanded[idx]}
+                    data-cy={`expand-button-${idx}`}
                   >
                     {" > "}
                   </span>
@@ -135,6 +144,7 @@ const ExpandableTable: React.FC = () => {
                   aria-rowindex={idx + 3}
                   id={`expanded-content-${idx}`}
                   aria-live="polite"
+                  data-cy={`expanded-content-${idx}`}
                 >
                   <div className={styles.expandedContent} role="gridcell">
                     Expanded content for row {idx + 1}
