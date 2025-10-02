@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+# 📊 Responsive Expandable Table
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![CI Pipeline](https://github.com/esmanhoto/responsive-table/actions/workflows/ci.yml/badge.svg)](https://github.com/esmanhoto/responsive-table/actions/workflows/ci.yml)
 
-Currently, two official plugins are available:
+A modern, accessible, and responsive expandable table component built with React and TypeScript. Features comprehensive E2E testing, development workflow, and follows modern web accessibility standards.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- 🎯 **Responsive Design** - Adapts to different screen sizes with intelligent column layouts
+- ♿ **Accessibility First** - Full ARIA support, keyboard navigation, screen reader compatible
+- 🧪 **Comprehensive Testing** - E2E tests with Cypress, automated CI/CD pipeline
+- 🎨 **Modern Styling** - CSS Modules with responsive breakpoints and smooth animations
+- 📱 **Mobile Optimized** - Touch-friendly interactions and mobile-first approach
+- 🔧 **Professional Tooling** - ESLint, Prettier, TypeScript, automated quality checks
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Quick Start
 
-## Expanding the ESLint configuration
+```bash
+# Install dependencies
+npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Start development server
+npm run dev
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Run tests
+npm run test:open
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Build for production
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Command                | Description                  |
+| ---------------------- | ---------------------------- |
+| `npm run dev`          | Start development server     |
+| `npm run build`        | Build for production         |
+| `npm run lint`         | Run ESLint checks            |
+| `npm run lint:fix`     | Fix ESLint issues            |
+| `npm run format`       | Format code with Prettier    |
+| `npm run format:check` | Check code formatting        |
+| `npm run test`         | Run Cypress tests (headless) |
+| `npm run test:open`    | Open Cypress UI              |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🏗️ Tech Stack
+
+**Frontend:**
+
+- ⚛️ React 19 with TypeScript
+- ⚡ Vite for build tooling
+- 🎨 CSS Modules for styling
+- 📱 Responsive CSS Grid/Flexbox
+
+**Development:**
+
+- 🔍 ESLint + TypeScript ESLint
+- 💅 Prettier for code formatting
+- 🧪 Cypress for E2E testing
+- ♿ eslint-plugin-jsx-a11y for accessibility
+
+**CI/CD:**
+
+- 🚀 GitHub Actions workflow
+- ✅ Automated testing on PRs
+- 🔒 Security auditing
+- 📦 Build verification
