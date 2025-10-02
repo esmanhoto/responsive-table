@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./ExpandableTable.module.css";
+import dataCrunchLogo from "../assets/dataCrunchLogo.png";
 
 const columnCount = 6;
 const rowCount = 2;
@@ -43,7 +44,7 @@ const ExpandableTable: React.FC = () => {
             aria-label="dataCrunch Logo"
           >
             <img
-              src="/dataCrunchLogo.png"
+              src={dataCrunchLogo}
               alt="dataCrunch"
               className={styles.logo}
               data-cy="logo"
