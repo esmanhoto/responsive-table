@@ -70,16 +70,14 @@ const ExpandableTable: React.FC = () => {
                 }
                 onClick={() => toggleRow(idx)}
                 tabIndex={0}
-                onKeyDown={(e) => {
+                onKeyDown={e => {
                   if (e.key === "Enter" || e.key === " ") {
                     e.preventDefault();
                     toggleRow(idx);
                   }
                 }}
-                onFocus={(e) =>
-                  e.currentTarget.classList.add(styles.focusedRow)
-                }
-                onBlur={(e) =>
+                onFocus={e => e.currentTarget.classList.add(styles.focusedRow)}
+                onBlur={e =>
                   e.currentTarget.classList.remove(styles.focusedRow)
                 }
               >
